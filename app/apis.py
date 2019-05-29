@@ -1,7 +1,8 @@
 import json
+import os
 import requests
 
-api_key
+api_key = os.environ['API_KEY']
 api_url_base = "https://api.nytimes.com/svc/movies/v2"
 
 
