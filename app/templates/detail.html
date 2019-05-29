@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>{{ movie }}</h1>
+  {% if infos['multimedia'] != 'None' %}
+  <img src={{ infos['multimedia']['src'] }} alt="Image for {{ moviename }}" height={{ infos['multimedia']['height'] }}
+                                            width={{ infos['multimedia']['width'] }}>
+  {% endif %}
+  {% for k, v in infos.items() %}
+    {% if k not in ["display_title", "sort_name", "link", "multimedia"] %}
+    <p>{{ k }} : {{ v }}</p>
+    {% endif %}
+  {% endfor %}
+  <a href={{ infos['link']['url'] }}>{{ infos['link']['suggested_link_text'] }}</a>
+{% endblock %}

@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Search Movie</h1>
+  <form action="/search" method="post" novalidate>
+    {{ form.hidden_tag() }}
+    <p>
+      {{ form.query.label }}<br>
+      {{ form.query(size=32) }}<br>
+      {% for error in form.query.errors %}
+        <span style="color: red;">{{ error }}</span>
+      {% endfor %}
+    </p>
+    <p>
+      {{ form.reviewer.label }}<br>
+      {{ form.reviewer(size=32) }}<br>
+      {% for error in form.reviewer.errors %}
+        <span style="color: red;">{{ error }}</span>
+      {% endfor %}
+    </p>
+    <p>
+      U.S. opening date: <br>
+      from {{ form.opening_start() }} to 
+      {{ form.opening_end() }}<br>
+      {% for error in form.opening_end.errors %}
+        <span style="color: red;">{{ error }}</span>
+      {% endfor %}
+    </p>
+    <p>
+      Review publication date: <br>
+      from {{ form.publication_start() }} to 
+      {{ form.publication_end() }}<br>
+      {% for error in form.publication_end.errors %}
+        <span style="color: red;">{{ error }}</span>
+      {% endfor %}
+    </p>
+    <p>
+      {{ form.order.label }}{{ form.order() }}<br>
+      {% for error in form.order.errors %}
+        <span style="color: red;">{{ error }}</span>
+      {% endfor %}
+    </p>
+    <p>
+      {{ form.critics_pick() }} {{ form.critics_pick.label }}<br>
+      {% for errot in form.critics_pick.errors %}
+        <span style="color: red;">{{ error }}</span>
+      {% endfor %}
+    </p>
+    <p>{{ form.submit() }}</p>
+  </form>
+{% endblock %}
