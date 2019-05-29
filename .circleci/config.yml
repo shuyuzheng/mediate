@@ -47,7 +47,7 @@ jobs:
           name: run tests
           command: |
             . venv/bin/activate
-            python addTwoNumber.py test
+            python test_app.py test
       - store_artifacts:
           path: test-reports
           destination: test-reports
