@@ -17,7 +17,18 @@ This app will communicate via a custom API to our backend, which will aggregate 
 Happy hacking!
 
 ___
-# Demo
-- [With NodeJS](https://whispering-savannah-50258.herokuapp.com/)
-- [With Python](https://flask-mediate.herokuapp.com/)
+# Backend with NodeJS
 
+***This is the endpoint to nyt api***
+- [Shares](https://nyt-unmock.herokuapp.com/shared)
+- [Emails](https://nyt-unmock.herokuapp.com/viewed)
+- [Reviews](https://nyt-unmock.herokuapp.com/reviews)
+- [Emails](https://nyt-unmock.herokuapp.com/viewed)
+- [Articles](https://nyt-unmock.herokuapp.com/article)
+- [BestSellers](https://nyt-unmock.herokuapp.com/list)
+
+___
+# Fullstack with Python
+
+***Demo using model, view and controller***  
+- [Demo](https://flask-mediate.herokuapp.com/)
